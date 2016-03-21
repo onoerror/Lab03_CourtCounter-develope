@@ -17,59 +17,12 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
-        <LinearLayout
+        <fragment android:name="layout.Blank"
+            android:id="@+id/fragment_team_a"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/team_a_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:gravity="center"
-                android:text="0"
-                android:textSize="56sp"/>
-
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/hornets"/>
-
-            <Button
-                android:id="@+id/add3ForTeamA"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="addForTeamA"
-                android:text="+3 分球"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"/>
-
-            <Button
-                android:id="@+id/add2ForTeamA"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="addForTeamA"
-                android:text="+2 分球"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"/>
-
-            <Button
-                android:id="@+id/add1ForTeamA"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="addForTeamA"
-                android:text="罰球"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"/>
-        </LinearLayout>
+            tools:layout="@layout/fragment_blank"/>
 
         <TextView
             android:layout_width="3dp"
@@ -77,58 +30,14 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@android:color/darker_gray"/>
-        <LinearLayout
+
+        <fragment android:name="layout.Blank"
+            android:id="@+id/fragment_team_b"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            tools:layout="@layout/fragment_blank"/>
 
-            <TextView
-                android:id="@+id/team_b_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="56sp"/>
-
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/houston_rockets"/>
-
-            <Button
-                android:id="@+id/add3ForTeamB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="addForTeamB"
-                android:text="+3 分球"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"/>
-
-            <Button
-                android:id="@+id/add2ForTeamB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="addForTeamB"
-                android:text="+2 分球"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"/>
-
-            <Button
-                android:id="@+id/add1ForTeamB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="addForTeamB"
-                android:text="罰球"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"/>
-        </LinearLayout>
     </LinearLayout>
 
     <Button
