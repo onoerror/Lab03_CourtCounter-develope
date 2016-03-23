@@ -3,84 +3,54 @@ package com.example.melvin.lab03_courtcounter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
 
 import layout.Blank;
 
 public class MainActivity extends AppCompatActivity {
 
-//    private TextView scoreViewA,scoreViewB;
-//    private int scoreTeamA = 0;
-//    private int scoreTeamB = 0;
+    private int scoreTeamA;
+    private int scoreTeamB;
 
+    private Blank m_fragment_team_a;
+    private Blank m_fragment_team_b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        findViews();
-    }
 
-    public void addThreePoints(View view) {
-        Blank fragment_team_a =
+    }
+    @Override
+    protected void onStart() {//畫面建立後執行
+        super.onStart();
+        setFragmentTeamName();
+    }
+    private void setFragmentTeamName(){
+        m_fragment_team_a =
                 (Blank)getSupportFragmentManager().findFragmentById(R.id.fragment_team_a);
-        fragment_team_a.
+        m_fragment_team_b =
+                (Blank)getSupportFragmentManager().findFragmentById(R.id.fragment_team_b);
+        m_fragment_team_a.setTeamName("黃蜂");
+        m_fragment_team_b.setTeamName("火箭");
     }
 
-    public void addTwoPoints(View view) {
+    public void resetScoreView(View view) {
+        if(view.getId() == R.id.reset){
+            scoreTeamA = 0;
+            scoreTeamB = 0;
+            //重設Fragment Score 為 0
+//            Blank fragment_team_a =
+//                    (Blank)getSupportFragmentManager().findFragmentById(R.id.fragment_team_a);
+//            Blank fragment_team_b =
+//                    (Blank)getSupportFragmentManager().findFragmentById(R.id.fragment_team_b);
+//            fragment_team_a.restScore();
+//            fragment_team_b.restScore();
+            m_fragment_team_a.restScore();
+            m_fragment_team_b.restScore();
+        }
     }
 
-    public void freeThrow(View view) {
-    }
-
-
-//    private void findViews(){
-//        scoreViewA = (TextView)findViewById(R.id.team_a_score);
-//        scoreViewB = (TextView)findViewById(R.id.team_b_score);
-//    }
-//
-//    public void addForTeamA(View view) {
-//        switch (view.getId()){
-//            case R.id.add3ForTeamA:
-//                scoreTeamA += 3;
-//                break;
-//            case R.id.add2ForTeamA:
-//                scoreTeamA += 2;
-//                break;
-//            case R.id.add1ForTeamA:
-//                scoreTeamA += 1;
-//                break;
-//            }
-//        scoreViewA.setText(String.valueOf(scoreTeamA));
-//
-//    }
-//
-//
-//    public void addForTeamB(View view) {
-//        switch (view.getId()){
-//            case R.id.add3ForTeamB:
-//                scoreTeamB += 3;
-//                break;
-//            case R.id.add2ForTeamB:
-//                scoreTeamB += 2;
-//                break;
-//            case R.id.add1ForTeamB:
-//                scoreTeamB += 1;
-//                break;
-//        }
-//        scoreViewB.setText(String.valueOf(scoreTeamB));
-//
-//    }
-//
-//    public void resetScoreView(View view) {
-//        if(view.getId() == R.id.reset){
-//            scoreTeamA = 0;
-//            scoreTeamB = 0;
-//            scoreViewA.setText(String.valueOf(scoreTeamA));
-//            scoreViewB.setText(String.valueOf(scoreTeamB));
-//        }
-//    }
 
 
 

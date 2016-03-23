@@ -8,25 +8,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-
         android:orientation="vertical">
-
+        <ImageView
+            android:src="@drawable/hornets"
+            android:layout_gravity="center"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:id="@+id/img_team_logo" />
         <TextView
             android:id="@+id/tv_team_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center"
             android:text="0"
-            android:textSize="56sp"/>
+            android:textSize="50sp"/>
 
 
         <TextView
             android:id="@+id/tv_team_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:text="隊名"
             android:textSize="24sp"/>
@@ -36,8 +40,8 @@
             android:id="@+id/btn_three_points"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:onClick="addThreePoints"
+            android:layout_marginBottom="5dp"
+
             android:text="+3 分球"
             android:textColor="@android:color/white"
             android:textSize="24sp"/>
@@ -46,8 +50,8 @@
             android:id="@+id/btn_two_points"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:onClick="addTwoPoints"
+            android:layout_marginBottom="5dp"
+
             android:text="+2 分球"
             android:textColor="@android:color/white"
             android:textSize="24sp"/>
@@ -56,8 +60,8 @@
             android:id="@+id/btn_free_points"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:onClick="freeThrow"
+            android:layout_marginBottom="5dp"
+
             android:text="罰球"
             android:textColor="@android:color/white"
             android:textSize="24sp"/>
